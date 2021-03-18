@@ -24,6 +24,8 @@ public class UtilRecorridos {
         marcados.set(posVertice, Boolean.TRUE);
     }
 
+    public void desmarcarVertice(int posVertice) { marcados.set(posVertice,Boolean.FALSE);}
+
     public boolean estaMarcado(int posVertice) {
         return marcados.get(posVertice);
     }

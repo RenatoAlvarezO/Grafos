@@ -75,6 +75,7 @@ public class Grafo {
         if (posVerticeOrigen != posVerticeDestino) {
             List<Integer> adyacenciasDelDestino = this.listaDeAydacencias.get(posVerticeDestino);
             adyacenciasDelDestino.add(posVerticeOrigen);
+            Collections.sort(adyacenciasDelDestino);
         }
     }
 

@@ -10,6 +10,7 @@ import java.util.List;
 
 public class GrafoPesado {
     protected List<List<AdyacenteConPeso>> listaDeAydacencias;
+
     public GrafoPesado() {
     }
 
@@ -71,7 +72,7 @@ public class GrafoPesado {
         Collections.sort(adyacenciasDelOrigen);
         if (posVerticeOrigen != posVerticeDestino) {
             List<AdyacenteConPeso> adyacenciasDelDestino = this.listaDeAydacencias.get(posVerticeDestino);
-            adyacenciasDelDestino.add(new AdyacenteConPeso(posVerticeOrigen,costo));
+            adyacenciasDelDestino.add(new AdyacenteConPeso(posVerticeOrigen, costo));
         }
     }
 
@@ -111,8 +112,7 @@ public class GrafoPesado {
         validarVertice(posDeVertice);
         List<AdyacenteConPeso> adyacenciasDelVertice = this.listaDeAydacencias.get(posDeVertice);
         List<Integer> adyacentesDelVertice = new ArrayList<>();
-        for(AdyacenteConPeso adyacente : adyacenciasDelVertice)
-        {
+        for (AdyacenteConPeso adyacente : adyacenciasDelVertice) {
             adyacentesDelVertice.add(adyacente.getIndiceVertice());
         }
         Iterable<Integer> it = adyacentesDelVertice;
@@ -135,6 +135,20 @@ public class GrafoPesado {
 
             List<AdyacenteConPeso> adyacenciaDelDestino = this.listaDeAydacencias.get(posVerticeDestino);
             adyacenciaDelDestino.remove(adyacenciaDelDestino.indexOf(new AdyacenteConPeso(posVerticeDestino)));
+        }
+    }
+
+
+    public double getPeso(int posVerticeOrigen, int posVerticeDestino) {
+        validarVertice(posVerticeOrigen);
+        validarVertice(posVerticeDestino);
+        List<AdyacenteConPeso> adyacenciasDelOrigen = this.listaDeAydacencias.get(posVerticeOrigen);
+        AdyacenteConPeso destino = new AdyacenteConPeso(posVerticeDestino);
+        if (!adyacenciasDelOrigen.contains(destino))
+            return 1.0 / 0;
+        else {
+            int posicionDestino = adyacenciasDelOrigen.indexOf(destino);
+            return adyacenciasDelOrigen.get(posicionDestino).getPeso();
         }
     }
 

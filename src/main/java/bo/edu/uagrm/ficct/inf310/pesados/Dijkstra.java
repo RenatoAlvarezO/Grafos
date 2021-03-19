@@ -68,6 +68,16 @@ public class Dijkstra {
         costoMinimo = listaDeCostos.get(verticeDestino);
     }
 
+
+    /**
+     *  (10.) Para un grafo dirigido pesado implementar el algoritmo de Dijkstra que muestre cual es el
+     * camino de costo mínimo entre un vértice a y b y cual el costo
+     *
+     *
+     * @param: vertice de Origen y de destino
+     * @return: Doble, el costo minimo para ir del vertice de origen al de destino
+     *
+     * */
     public double getCostoMinimo(int verticeOrigen, int verticeDestino)
     {
         caminoMinimo(verticeOrigen,verticeDestino);

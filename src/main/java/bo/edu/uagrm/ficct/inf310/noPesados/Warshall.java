@@ -14,6 +14,17 @@ public class Warshall {
     int cantidadVertices;
     List<UtilRecorridos> matrizDeCaminos;
 
+    /**
+     *  (7.) Para un grafo dirigido implementar el algoritmo de Wharsall, que luego muestre entre que
+     * vértices hay camino
+     *
+     * Aparte del recorrido, está implementado el metodo getCaminosDeVertices() para la visualizacion
+     * de la matriz de caminos
+     *
+     * @param: Digrafo unDigrafo
+     * @return:
+     *
+     * */
     public Warshall(Digrafo unDigrafo) {
         cantidadVertices = unDigrafo.cantidadVertices();
         this.digrafo = unDigrafo;

@@ -14,6 +14,18 @@ public class Floyd {
     int cantidadVertices;
     List<List<Double>> matrizDeCaminos;
 
+
+    /**
+     *  (8.) Para un grafo dirigido usando la implementación del algoritmo de Floyd-Wharsall encontrar
+     * los caminos de costo mínimo entre un vértice a y el resto. Mostrar los costos y cuáles son
+     * los caminos
+     *
+     *
+     * @param: Digrafo unDigrafo
+     * @return: Lista de Dobles, en si, el metodo que devuelve el valor es
+     * listaDeCostos(int verticeABuscar)
+     *
+     * */
     public Floyd(DigrafoPesado unDigrafo) {
         cantidadVertices = unDigrafo.cantidadVertices();
         this.grafo = unDigrafo;
@@ -57,6 +69,10 @@ public class Floyd {
         return this.matrizDeCaminos;
     }
 
+    public List<Double> listaDeCostos(int verticeABuscar)
+    {
+        return this.matrizDeCaminos.get(verticeABuscar);
+    }
 
     @Override
     public String toString() {

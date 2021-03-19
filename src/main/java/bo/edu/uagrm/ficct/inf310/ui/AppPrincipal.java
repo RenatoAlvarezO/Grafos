@@ -11,6 +11,7 @@ import bo.edu.uagrm.ficct.inf310.noPesados.conexo.DebilmenteConexo;
 import bo.edu.uagrm.ficct.inf310.noPesados.isla.IslaDigrafo;
 import bo.edu.uagrm.ficct.inf310.noPesados.isla.IslaGrafo;
 import bo.edu.uagrm.ficct.inf310.pesados.DigrafoPesado;
+import bo.edu.uagrm.ficct.inf310.pesados.Dijkstra;
 import bo.edu.uagrm.ficct.inf310.pesados.Floyd;
 import bo.edu.uagrm.ficct.inf310.pesados.GrafoPesado;
 
@@ -70,6 +71,24 @@ public class AppPrincipal {
         terminal.imprimirOrdenEnFormato("6. Numero de islas en digrafo no pesado");
         System.out.println(new IslaDigrafo(diGrafo).cantidadDeIslas());
 
+        terminal.imprimirOrdenEnFormato("7. Algoritmo de Warshall en digrafo no pesado");
+        System.out.println(new Warshall(diGrafo).getCaminosDeVertices());
 
+        terminal.imprimirOrdenEnFormato("Digrafo Pesado");
+        DigrafoPesado digrafoPesado = new DigrafoPesado(5);
+        digrafoPesado.insertarArista(0,1,99.0);
+        digrafoPesado.insertarArista(0,2,50.0);
+        digrafoPesado.insertarArista(1,2,50.0);
+        digrafoPesado.insertarArista(1,3,50.0);
+        digrafoPesado.insertarArista(1,4,50.0);
+        digrafoPesado.insertarArista(2,3,99.0);
+        digrafoPesado.insertarArista(3,4,75.0);
+        System.out.println(digrafoPesado);
+
+        terminal.imprimirOrdenEnFormato("8. Algoritmo Floyd-Warshall Algoritmo Digrafo Pesado");
+        System.out.println(new Floyd(digrafoPesado).listaDeCostos(1));
+
+        terminal.imprimirOrdenEnFormato("10. Algoritmo Dijkstra Algoritmo Digrafo Pesado");
+        System.out.println(new Dijkstra(digrafoPesado).getCostoMinimo(1,3));
     }
 }

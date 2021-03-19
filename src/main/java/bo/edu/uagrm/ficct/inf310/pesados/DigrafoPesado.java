@@ -29,6 +29,11 @@ public class DigrafoPesado extends GrafoPesado {
     }
 
     @Override
+    public double getPeso(int posVerticeOrigen, int posVerticeDestino) {
+        return super.getPeso(posVerticeOrigen, posVerticeDestino);
+    }
+
+    @Override
     public int gradoDeVertice(int posDeVertice) {
         throw new UnsupportedOperationException("No soportado en grafos dirigidos");
     }

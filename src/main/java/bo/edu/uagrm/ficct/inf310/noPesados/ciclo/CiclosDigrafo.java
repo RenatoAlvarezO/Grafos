@@ -18,7 +18,13 @@ public class CiclosDigrafo {
         this.digrafo = unDigrafo;
         warshall = new Warshall(unDigrafo);
     }
-
+    /*
+    * (2.) Para un grafo dirigido implementar un algoritmo para encontrar
+    * si el grafo dirigido tiene ciclos
+    * @param:
+    * @return: retorna TRUE si existen ciclos, si no, FALSE
+    *
+    * */
     public boolean existenCiclos() {
         boolean existeCiclo = false;
         int indiceDiagonal = 0;

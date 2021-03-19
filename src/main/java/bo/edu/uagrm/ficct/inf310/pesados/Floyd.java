@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Floyd {
 
-    private double INFINITO = (float) (1.0 / 0.0);
+    private double INFINITO = (1.0 / 0.0);
     DigrafoPesado grafo;
     int cantidadVertices;
     List<List<Double>> matrizDeCaminos;

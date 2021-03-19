@@ -56,6 +56,13 @@ public class CiclosGrafo {
         return existeUnCiclo;
     }
 
+    /**
+     * (4.) Para un grafo no dirigido implementar un algoritmo para encontrar que en que vértices del
+     * grafo hay ciclos
+     *
+     * @param:
+     * @return:
+     * */
     public List<Integer> verticesConCiclos() throws ExcepcionAristaYaExiste {
 
         List<Integer> listaDeVertices = new LinkedList<>();

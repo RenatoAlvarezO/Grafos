@@ -17,6 +17,14 @@ public class DebilmenteConexo {
         this.digrafo = unDigrafo;
     }
 
+    /**
+     *  (3.)  Para un grafo dirigido implementar un algoritmo
+     *  para encontrar si es débilmente conexo
+     *
+     *  @param:
+     *  @return:
+     *
+     * */
     public boolean esDebilmenteConexo() {
         recorrido = new DFS(digrafo, 0);
         int proximoVerticeNoMarcado = 0;

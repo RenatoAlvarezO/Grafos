@@ -16,7 +16,14 @@ public class IslaGrafo {
         this.cantidadIslas = contarIslas(0, 0);
 
     }
-
+    /**
+     *  (5.)  Para un grafo no dirigido implementar un algoritmo para encontrar el número de islas que
+     * hay en el grafo
+     *
+     * @param:
+     * @return: retorna la cantidad de islas en el digrafo
+     *
+     * */
     private int contarIslas(int posVertice, int cantidadIslas) {
         if (controlMarcados.estanTodosMarcados())
             return cantidadIslas;

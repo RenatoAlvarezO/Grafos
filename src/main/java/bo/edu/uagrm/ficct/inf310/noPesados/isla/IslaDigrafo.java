@@ -19,7 +19,14 @@ public class IslaDigrafo {
     public IslaDigrafo(Digrafo digrafo) {
         this.digrafo = digrafo;
     }
-
+    /**
+     *  (6.)  Para un grafo dirigido implementar un algoritmo para encontrar el número de islas que
+     * hay en el grafo
+     *
+     * @param:
+     * @return: retorna la cantidad de islas en el digrafo
+     *
+     * */
     private int contarIslas() {
         recorrido = new DFS(digrafo, 0);
         int cantidadIslas = 0;
@@ -65,6 +72,14 @@ public class IslaDigrafo {
         return proximoVerticeNoMarcado;
     }
 
+    /**
+    * (1.) Para un grafo dirigido implementar un método o clase que sea capas de retornar los
+    * componentes de las islas que existen en dicho digrafo
+    *
+    *   @param:
+    *   @return: retorna una lista de los componentes por islas
+    *
+    * */
     public List<List<Integer>> componentesIslas() {
         List<List<Integer>> listaDeComponentes = new LinkedList<>();
         int cantidadDeIslas = contarIslas();
